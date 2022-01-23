@@ -225,6 +225,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 315564001}
+  - component: {fileID: 315564002}
   - component: {fileID: 315564000}
   - component: {fileID: 315563999}
   - component: {fileID: 315563998}
@@ -311,6 +312,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &315564002
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 315563997}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44a3649600a3bc4408ad961b018e0793, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _scoreToGive: 1
+  _clicksToPop: 5
+  _scaleIncreasePerClick: 0.1
 --- !u!1 &930094352
 GameObject:
   m_ObjectHideFlags: 0
@@ -403,6 +419,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1128141175}
+  - component: {fileID: 1128141176}
   - component: {fileID: 1128141174}
   - component: {fileID: 1128141173}
   - component: {fileID: 1128141172}
@@ -489,6 +506,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1128141176
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1128141171}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44a3649600a3bc4408ad961b018e0793, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _scoreToGive: 1
+  _clicksToPop: 5
+  _scaleIncreasePerClick: 0.1
 --- !u!1 &1264885883
 GameObject:
   m_ObjectHideFlags: 0
@@ -498,6 +530,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1264885887}
+  - component: {fileID: 1264885888}
   - component: {fileID: 1264885886}
   - component: {fileID: 1264885885}
   - component: {fileID: 1264885884}
@@ -584,3 +617,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1264885888
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1264885883}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44a3649600a3bc4408ad961b018e0793, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _scoreToGive: 1
+  _clicksToPop: 5
+  _scaleIncreasePerClick: 0.1
