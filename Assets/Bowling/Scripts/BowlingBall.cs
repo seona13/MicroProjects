@@ -21,4 +21,22 @@ public class BowlingBall : MonoBehaviour
 	{
 		_rig.AddForce(transform.forward * _forwardForce, ForceMode.Impulse);
 	}
+
+
+	public void MoveLeft()
+	{
+		if (transform.position.x > _leftBorder)
+		{
+			transform.position += new Vector3(-_moveIncrement, 0, 0);
+		}
+	}
+
+
+	public void MoveRight()
+	{
+		if (transform.position.x < _rightBorder)
+		{
+			transform.position += new Vector3(_moveIncrement, 0, 0);
+		}
+	}
 }
