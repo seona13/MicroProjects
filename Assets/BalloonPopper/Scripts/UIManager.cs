@@ -8,16 +8,29 @@ using TMPro;
 public class UIManager : MonoBehaviour
 {
     [SerializeField]
-    TMP_Text _score;
+    TextMeshProUGUI _score;
 
 
-    void Start()
+	void OnEnable()
+	{
+        ScoreManager.onScoreChanged += UpdateScore;
+	}
+
+
+	void OnDisable()
+	{
+        ScoreManager.onScoreChanged -= UpdateScore;
+	}
+
+
+	void Start()
     {
-        
+        UpdateScore(0);
     }
 
-    void Update()
-    {
-        
-    }
+
+    void UpdateScore(int amount)
+	{
+        _score.text = amount.ToString();
+	}
 }

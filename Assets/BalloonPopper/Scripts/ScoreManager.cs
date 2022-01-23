@@ -1,10 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 
 public class ScoreManager : MonoBehaviour
 {
+	public static event Action<int> onScoreChanged;
+
 	[SerializeField]
 	int _score;
 
@@ -24,5 +27,6 @@ public class ScoreManager : MonoBehaviour
 	void IncreaseScore(int amount)
 	{
 		_score += amount;
+		onScoreChanged?.Invoke(_score);
 	}
 }
