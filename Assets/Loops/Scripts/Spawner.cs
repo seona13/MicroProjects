@@ -34,6 +34,11 @@ public class Spawner : MonoBehaviour
 
     void SpawnEnemies()
 	{
-
+		for (int i = 0; i < _spawnCount; i++)
+		{
+            float xPos = i * _spawnOffset;
+            Vector3 spawnPos = new Vector3(xPos, 0, 0);
+            Instantiate(_spawnPrefab, spawnPos, Quaternion.identity);
+		}
 	}
 }
