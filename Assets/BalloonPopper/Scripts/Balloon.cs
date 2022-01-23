@@ -1,10 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 
 public class Balloon : MonoBehaviour
 {
+	public static event Action<int> onBalloonClick;
+
 	[SerializeField]
 	int _scoreToGive = 1;
 	[SerializeField]
@@ -15,8 +18,13 @@ public class Balloon : MonoBehaviour
 
 	void OnMouseDown()
 	{
-		_clicksToPop--;
-
 		transform.localScale += Vector3.one * _scaleIncreasePerClick;
+
+		_clicksToPop--;
+		if (_clicksToPop == 0)
+		{
+			onBalloonClick?.Invoke(_scoreToGive);
+			Destroy(gameObject);
+		}
 	}
 }
