@@ -17,13 +17,8 @@ public class BowlingBall : MonoBehaviour
 	Rigidbody _rig;
 
 
-	private void Start()
+	public void Bowl()
 	{
-		Bowl();
-	}
-
-	void Bowl()
-	{
-		_rig.AddForce(transform.forward * _forwardForce);
+		_rig.AddForce(transform.forward * _forwardForce, ForceMode.Impulse);
 	}
 }
