@@ -4,15 +4,16 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+	[SerializeField]
+	float _moveForce;
+	[SerializeField]
+	Rigidbody _rig;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
+	void FixedUpdate()
+	{
+		float xInput = Input.GetAxis("Horizontal");
+
+		_rig.AddForce(Vector3.right * xInput * _moveForce);
+	}
 }
